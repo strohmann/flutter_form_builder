@@ -195,7 +195,7 @@ class _FormBuilderCountryPickerState extends State<FormBuilderCountryPicker> {
         contentPadding: EdgeInsets.zero,
         leading: CountryPickerUtils.getDefaultFlagImage(country),
         title: Text(country.name),
-        // visualDensity: VisualDensity.compact, //TODO: Re-enable after Flutter 1.17
+        visualDensity: VisualDensity.compact,
       ),
     );
   }
