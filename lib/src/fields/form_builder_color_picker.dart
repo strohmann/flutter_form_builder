@@ -156,7 +156,7 @@ class _FormBuilderColorPickerState extends State<FormBuilderColorPicker> {
           widget.onSaved(transformed ?? val);
         }
       },
-      autovalidate: widget.autovalidate ?? false,
+      autovalidateMode: widget.autovalidate ? AutovalidateMode.always : AutovalidateMode.disabled,
       builder: (FormFieldState<Color> field) {
         _effectiveController.text = HexColor(field.value)?.toHex();
 
