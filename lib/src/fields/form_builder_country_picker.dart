@@ -159,7 +159,7 @@ class _FormBuilderCountryPickerState extends State<FormBuilderCountryPicker> {
         context: context,
         builder: (context) => Theme(
           data: Theme.of(context).copyWith(
-            cursorColor: Theme.of(context).primaryColor,
+            //cursorColor: Theme.of(context).textSelectionTheme.cursorColor,
             primaryColor: widget.cursorColor ?? Theme.of(context).primaryColor,
           ),
           child: CountryPickerDialog(

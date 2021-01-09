@@ -204,7 +204,7 @@ class _FormBuilderColorPickerState extends State<FormBuilderColorPicker> {
           inputFormatters: widget.inputFormatters,
           keyboardAppearance: widget.keyboardAppearance,
           maxLength: widget.maxLength,
-          maxLengthEnforced: widget.maxLengthEnforced,
+          maxLengthEnforcement: widget.maxLengthEnforced ? MaxLengthEnforcement.enforced : MaxLengthEnforcement.none,
           maxLines: widget.maxLines,
           minLines: widget.minLines,
           onEditingComplete: widget.onEditingComplete,

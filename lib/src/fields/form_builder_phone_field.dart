@@ -188,7 +188,7 @@ class FormBuilderPhoneFieldState extends State<FormBuilderPhoneField> {
     return FormField(
       key: _fieldKey,
       initialValue: fullNumber,
-      autovalidate: widget.autovalidate,
+      autovalidateMode: widget.autovalidate ? AutovalidateMode.always : AutovalidateMode.disabled,
       validator: (val) =>
           FormBuilderValidators.validateValidators(val, widget.validators),
       onSaved: (val) {
@@ -231,7 +231,7 @@ class FormBuilderPhoneFieldState extends State<FormBuilderPhoneField> {
           maxLength: widget.maxLength,
           inputFormatters: widget.inputFormatters,
           keyboardAppearance: widget.keyboardAppearance,
-          maxLengthEnforced: widget.maxLengthEnforced,
+          maxLengthEnforcement: widget.maxLengthEnforced ? MaxLengthEnforcement.enforced : MaxLengthEnforcement.none,
           scrollPadding: widget.scrollPadding,
           textAlign: widget.textAlign,
           textCapitalization: widget.textCapitalization,
@@ -311,7 +311,7 @@ class FormBuilderPhoneFieldState extends State<FormBuilderPhoneField> {
       builder: (context) {
         return Theme(
           data: Theme.of(context).copyWith(
-            cursorColor: widget.cursorColor,
+            //cursorColor: widget.cursorColor,
             primaryColor: widget.cursorColor ?? Theme.of(context).primaryColor,
           ),
           child: CountryPickerDialog(
