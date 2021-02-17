@@ -287,13 +287,13 @@ class _FormBuilderColorPickerState extends State<FormBuilderColorPicker> {
               }),
             ),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: const Text('Cancel'),
                 onPressed: () {
                   Navigator.of(context).pop(false);
                 },
               ),
-              FlatButton(
+              TextButton(
                 child: const Text('OK'),
                 onPressed: () {
                   _setColor(pickedColor);
